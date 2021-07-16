@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CopyButton from "./components/CopyButton";
 
 function App() {
+  const exampleTextOne = "First String";
+  const exampleTextTwo = "Second String Second String";
+  const exampleTextThree = "123456789";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>test</h2>
+      <p>{exampleTextOne}</p>
+      <CopyButton textToCopy={exampleTextOne} />
+      <p>{exampleTextTwo}</p>
+      <CopyButton textToCopy={exampleTextTwo} />
+      <p>{exampleTextThree}</p>
+      <CopyButton textToCopy={exampleTextThree} />
+      <div>
+        <h2>Paste text here!</h2>
+        <textarea rows="4" cols="50"></textarea>
+      </div>
     </div>
   );
 }
